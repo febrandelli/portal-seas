@@ -12,4 +12,4 @@ services:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: "teste"
     volumes:
-      - ./mysqldata
+      - ./mysql:/var/lib/mysql
