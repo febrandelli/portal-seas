@@ -22,4 +22,9 @@ public class Cidade {
     @ManyToOne
     @JoinColumn(name = "ID_ESTADO")
     private Estado idEstado;
+
+    @Override
+    public String toString(){
+        return this.idEstado.getNome() + " - " + this.nome;
+    }
 }

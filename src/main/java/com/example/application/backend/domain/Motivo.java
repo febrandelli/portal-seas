@@ -20,4 +20,7 @@ public class Motivo {
     @Column(name = "DESCRICAO")
     private String descricao;
 
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "motivo", cascade = CascadeType.ALL)
+    private Set<CidadaoMotivo> motivos;
+
 }

@@ -20,7 +20,7 @@ import com.vaadin.flow.component.tabs.TabsVariant;
 import com.vaadin.flow.router.RouterLink;
 import com.vaadin.flow.server.PWA;
 import com.vaadin.flow.router.PageTitle;
-import com.example.application.UI.views.cadastros.CadastroAbordadoView;
+import com.example.application.UI.views.cidadoes.CidadoesView;
 import com.example.application.UI.views.about.AboutView;
 
 /**
@@ -82,7 +82,7 @@ public class MainView extends AppLayout {
 
     private Component[] createMenuItems() {
         return new Tab[]{
-                createTab("Cadastro Abordado", CadastroAbordadoView.class),
+                createTab("Cadastro Abordado", CidadoesView.class),
                 createTab("About", AboutView.class) ,
                 createTab("About", AboutView.class)};
     }

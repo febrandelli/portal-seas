@@ -21,4 +21,9 @@ public class Sexo {
 
     @Column(name = "NOMECLATURA")
     private String nomeclatura;
+
+    @Override
+    public String toString() {
+        return this.nomeclatura;
+    }
 }
