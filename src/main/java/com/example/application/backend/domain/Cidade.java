@@ -25,6 +25,6 @@ public class Cidade {
 
     @Override
     public String toString(){
-        return this.idEstado.getNome() + " - " + this.nome;
+        return this.nome;
     }
 }

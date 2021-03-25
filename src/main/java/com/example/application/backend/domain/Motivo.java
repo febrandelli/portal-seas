@@ -5,7 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.Set;
 
 @Data
 @Entity
@@ -20,7 +19,9 @@ public class Motivo {
     @Column(name = "DESCRICAO")
     private String descricao;
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "motivo", cascade = CascadeType.ALL)
-    private Set<CidadaoMotivo> motivos;
+    @Override
+    public String toString(){
+        return this.descricao;
+    }
 
 }

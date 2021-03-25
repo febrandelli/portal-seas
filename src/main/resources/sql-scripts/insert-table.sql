@@ -1,3 +1,22 @@
+INSERT INTO casos_especiais(id, nomeclatura) VALUES
+(1, 'DEFICIENTE'),
+(2, 'EXPLORAÇÃO SEXUAL'),
+(3, 'GESTANTE'),
+(4, 'PESSOA IDOSA'),
+(5, 'SAUDE MENTAL');
+
+INSERT INTO fonte_renda (id, nomeclatura) VALUES
+(1, 'TRABALHO FORMAL'),
+(2, 'TRABALHO INFORMAL'),
+(3, 'PEDE DINHEIRO'),
+(4, 'BENEFICIOS'),
+(5, 'EXPLORAÇÃO SEXUAL');
+
+INSERT INTO beneficio(id, nomeclatura) VALUES
+(1, 'APOSENTADORIA'),
+(2, 'BOLSA FAMILIA'),
+(3, 'BPC/LOAS');
+
 INSERT INTO motivos (id, descricao) VALUES
 (1, 'CONFLITO FAMILIAR'),
 (2, 'ABUSO DE ALCOOL'),

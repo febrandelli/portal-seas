@@ -32,7 +32,32 @@ public class Cidadao {
     @JoinColumn(name = "ID_CIDADE")
     private Cidade cidadeNascimento;
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "cidadao", cascade = CascadeType.ALL)
-    private Set<CidadaoMotivo> motivos;
+    @ManyToOne
+    @JoinColumn(name = "ID_PRINCIPAL_RENDA")
+    private FonteDeRenda fonteDeRenda;
+
+    @Column(name = "DESEJA_SAIR_RUA")
+    private Boolean querSairDasRuas;
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "cidadao_motivo", joinColumns = {
+            @JoinColumn(name = "cidadao_id")}, inverseJoinColumns = {
+            @JoinColumn(name = "motivo_id")
+    })
+    private Set<Motivo> motivos;
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "cidadao_caso_especial", joinColumns = {
+            @JoinColumn(name = "cidadao_id")}, inverseJoinColumns = {
+            @JoinColumn(name = "caso_especial_id")
+    })
+    private Set<CasosEspeciais> casosEspeciais;
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "cidadao_beneficio", joinColumns = {
+            @JoinColumn(name = "cidadao_id")}, inverseJoinColumns = {
+            @JoinColumn(name = "beneficio_id")
+    })
+    private Set<Beneficio> beneficios;
 
 }

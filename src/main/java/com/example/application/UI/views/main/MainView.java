@@ -66,7 +66,6 @@ public class MainView extends AppLayout {
         logoLayout.setId("logo");
         logoLayout.setAlignItems(FlexComponent.Alignment.CENTER);
         logoLayout.add(new Image("images/logo.png", "My App logo"));
-        logoLayout.add(new H1("My App"));
         layout.add(logoLayout, menu);
         return layout;
     }
@@ -82,9 +81,7 @@ public class MainView extends AppLayout {
 
     private Component[] createMenuItems() {
         return new Tab[]{
-                createTab("Cadastro Abordado", CidadoesView.class),
-                createTab("About", AboutView.class) ,
-                createTab("About", AboutView.class)};
+                createTab("Cidadões", CidadoesView.class)};
     }
 
     private static Tab createTab(String text, Class<? extends Component> navigationTarget) {
